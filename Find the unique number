@@ -1,0 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
+
+public class Kata
+{
+  public static int GetUnique(IEnumerable<int> numbers)=> numbers.Distinct().Where(o=> o!=numbers.Select(o=>o).OrderBy(o=>o).ToList()[1]).Single();
+}
