@@ -1,0 +1,19 @@
+public class Kata
+{
+  public static string DuplicateEncode(string word)
+  {
+    word = word.ToLower();
+    string result = "";
+    foreach (char ch in word)
+      {
+      int count = 0;
+      foreach (char ch2 in word)
+        {
+        if (ch2==ch) count++;
+      }
+      if(count==1) result +="(";
+        else result+=")";
+    }
+    return result;
+  }
+}
